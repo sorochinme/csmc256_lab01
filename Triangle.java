@@ -26,7 +26,7 @@ public class Triangle  {
       sideB = bIn;
       sideC = cIn;
 
-      if (sideA <= 0 || sideB <= 0 || sideC <= 0) {
+      if ((sideA <= 0 || sideB <= 0)|| sideC <= 0) {
          throw new IllegalArgumentException("Sides: " + sideA + " " + sideB + " " + sideC
             + " One of the sides is equal or less than 0");       // add an explanation why this exception is being thrown.
       }
@@ -46,14 +46,14 @@ public class Triangle  {
     */
    public String classify() {
       String result = "";
-      if ((sideA = sideB) || (sideB = sideC) || (sideC=sideA)){
-        result="isosceles";
+      if ((sideA == sideB || sideB == sideC)||(sideC==sideA)){
+        result= "isosceles";
       } 
-      if ((sideA != sideB) && (sideB != sideC) && (sideC != sideA)){
+      if ((sideA != sideB ) && (sideB != sideC) && (sideC != sideA))}
         result = "scalene";
       }
-      if ((sideA = sideB) && (sideB= sideC)){
-        result ="equilateral";
+      if (sideA == sideB && sideB == sideC){
+        result = "equilateral";
       }
       else {
         result = "not a triangle";
