@@ -46,13 +46,13 @@ public class Triangle  {
     */
    public String classify() {
       String result = "";
-      if ((sideA == sideB || sideB == sideC)||(sideC==sideA)){
+      if ((sideA == sideB) || (sideB == sideC)||(sideC==sideA)){
         result= "isosceles";
       } 
-      if ((sideA != sideB ) && (sideB != sideC) && (sideC != sideA))}
+      if ((sideA != sideB) && (sideB != sideC) && (sideC != sideA)){
         result = "scalene";
       }
-      if (sideA == sideB && sideB == sideC){
+      if ((sideA == sideB) && (sideB == sideC)){
         result = "equilateral";
       }
       else {
